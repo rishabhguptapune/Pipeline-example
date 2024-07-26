@@ -19,4 +19,19 @@ pipeline {
         }   
         
         }
+
+        post {
+
+            always {
+                sh 'echo "Always"'
+            }
+
+            success {
+                sh 'echo "Success"'
+            }
+
+            failure {
+                sh 'echo "Failure"'
+            }
+        }
 }
